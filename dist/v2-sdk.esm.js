@@ -15,8 +15,7 @@ import IUniswapV2Pair from '@cardioswap/v2-core/build/contracts/IUniswapV2Pair.j
 var _SOLIDITY_TYPE_MAXIMA;
 var ChainId;
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 369] = "MAINNET";
-  ChainId[ChainId["BSCTESTNET"] = 97] = "BSCTESTNET";
+  ChainId[ChainId["MAINNET"] = 1] = "MAINNET";
 })(ChainId || (ChainId = {}));
 var TradeType;
 (function (TradeType) {
@@ -29,8 +28,8 @@ var Rounding;
   Rounding[Rounding["ROUND_HALF_UP"] = 1] = "ROUND_HALF_UP";
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
-var FACTORY_ADDRESS = '0x692888d1d359be06cB9EFFA47eB946E9ecA695aC';
-var INIT_CODE_HASH = '0x883fb58464f65c11b31140b18ada41e7a0edae8695ffedbd43d3b6150e8375cb';
+var FACTORY_ADDRESS = '0x52fbA58f936833F8b643e881Ad308b2e37713a86';
+var INIT_CODE_HASH = '0xe52bc03495182c6d1b6a15111e963ba37f23e9a01347aa78328f88f086b80504';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000);
 // exports for internal consumption
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -40,7 +39,7 @@ var THREE = /*#__PURE__*/JSBI.BigInt(3);
 var FIVE = /*#__PURE__*/JSBI.BigInt(5);
 var TEN = /*#__PURE__*/JSBI.BigInt(10);
 var _100 = /*#__PURE__*/JSBI.BigInt(100);
-var _997 = /*#__PURE__*/JSBI.BigInt(997);
+var _997 = /*#__PURE__*/JSBI.BigInt(990);
 var _1000 = /*#__PURE__*/JSBI.BigInt(1000);
 var SolidityType;
 (function (SolidityType) {
@@ -326,7 +325,7 @@ function Currency(decimals, symbol, name) {
 /**
  * The only instance of the base class `Currency`.
  */
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'PLS', 'Pulse');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'ETH', 'Ether');
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -381,7 +380,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xA1077a294dDE1B09bB078844df40758a5D0f9a27', 18, 'WPLS', 'Wrapped Pulse'), _WETH[ChainId.BSCTESTNET] = /*#__PURE__*/new Token(ChainId.BSCTESTNET, '0xA1077a294dDE1B09bB078844df40758a5D0f9a27', 18, 'WPLS', 'Wrapped Pulse'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -641,7 +640,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(tokenAmountA, tokenAmountB) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'CARDIO-LP', 'CardioSwap LP');
+    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'PEPE-LP', 'Pepe LP');
     this.tokenAmounts = tokenAmounts;
   }
   Pair.getAddress = function getAddress(tokenA, tokenB) {
