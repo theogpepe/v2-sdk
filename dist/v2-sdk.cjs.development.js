@@ -15,7 +15,7 @@ var solidity = require('@ethersproject/solidity');
 var contracts = require('@ethersproject/contracts');
 var networks = require('@ethersproject/networks');
 var providers = require('@ethersproject/providers');
-var IUniswapV2Pair = _interopDefault(require('@cardioswap/v2-core/build/contracts/IUniswapV2Pair.json'));
+var IUniswapV2Pair = _interopDefault(require('@theogpepe/v2-core/build/contracts/IUniswapV2Pair.json'));
 
 var _SOLIDITY_TYPE_MAXIMA;
 (function (ChainId) {

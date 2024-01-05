@@ -988,10 +988,6 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@cardioswap/v2-core@https://github.com/cardioswap/v2-core.git":
-  version "1.0.1"
-  resolved "https://github.com/cardioswap/v2-core.git#d0bb7099cca052cdf1d47ecba26006e7ba5b0717"
-
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -1493,6 +1489,10 @@
     "@types/estree" "0.0.39"
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
+
+"@theogpepe/v2-core@https://github.com/theogpepe/v2-core.git":
+  version "1.0.1"
+  resolved "https://github.com/theogpepe/v2-core.git#a1cf44ee93c6915623b29cb851b50c5a8b9939f3"
 
 "@types/babel__core@^7.1.0":
   version "7.20.1"
